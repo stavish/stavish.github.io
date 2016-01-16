@@ -1025,4 +1025,8 @@ a.control_next {
   float: left;
   width: 100%;
   border: 0;
-  }
+}
+.logo{
+  width:100%;
+  height: auto;
+}

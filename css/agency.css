@@ -995,13 +995,18 @@ a.control_next {
         width: 85%;
         height: 85%;
 }
+.logo{
+  width:100%;
+  height: auto;
+}
+
 .rslides {
   position: relative;
   list-style: none;
   overflow: hidden;
-  width: 100%;
+  width: 90%;
   padding: 0;
-  margin: 0;
+  margin: auto;
   }
 
 .rslides li {
@@ -1009,8 +1014,6 @@ a.control_next {
   position: absolute;
   display: none;
   width: 100%;
-  left: 0;
-  top: 0;
   }
 
 .rslides li:first-child {
@@ -1025,8 +1028,4 @@ a.control_next {
   float: left;
   width: 100%;
   border: 0;
-}
-.logo{
-  width:100%;
-  height: auto;
-}
+  }

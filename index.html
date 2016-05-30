@@ -120,32 +120,17 @@
                 </div>
             </div>
             <div class="row">
-              <div style="width:90%;height:450;text-align:center;margin:auto;" ><object width="90%" height="450" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"  codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"> <param name="flashvars" value="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2F133685142%40N03%2Fshow&amp;page_show_back_url=%2Fphotos%2F133685142%40N03%2F&amp;user_id=133685142@N03" /> <param name="allowFullScreen" value="true" /> <param name="src" value="https://www.flickr.com/apps/slideshow/show.swf?v=71649" /> <embed width="90%" height="450" type="application/x-shockwave-flash" src="https://www.flickr.com/apps/slideshow/show.swf?v=71649" flashvars="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2F133685142%40N03%2Fshow&amp;page_show_back_url=%2Fphotos%2F133685142%40N03%2F&amp;user_id=133685142@N03" allowFullScreen="true" /> </object><br /><small>Created with <a href="http://www.flickrslideshow.com">flickr slideshow</a>.</small></div>
+              <!--<div style="width:90%;height:450;text-align:center;margin:auto;" ><object width="90%" height="450" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"  codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"> <param name="flashvars" value="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2F133685142%40N03%2Fshow&amp;page_show_back_url=%2Fphotos%2F133685142%40N03%2F&amp;user_id=133685142@N03" /> <param name="allowFullScreen" value="true" /> <param name="src" value="https://www.flickr.com/apps/slideshow/show.swf?v=71649" /> <embed width="90%" height="450" type="application/x-shockwave-flash" src="https://www.flickr.com/apps/slideshow/show.swf?v=71649" flashvars="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2F133685142%40N03%2Fshow&amp;page_show_back_url=%2Fphotos%2F133685142%40N03%2F&amp;user_id=133685142@N03" allowFullScreen="true" /> </object><br /><small>Created with <a href="http://www.flickrslideshow.com">flickr slideshow</a>.</small></div>-->
               <!--<a data-flickr-embed="true" data-context="true"  href="https://www.flickr.com/photos/133685142@N03/26510099162/in/album-72157665191710783/" title="Azara 420 After Party"><img src="https://farm2.staticflickr.com/1576/26510099162_d2a44f4e47_b.jpg" width="1024" height="540" alt="Azara 420 After Party"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
               -->
-
-              <!--<div id="slider">
-                <a href="#" class="control_next">>></a>
-                <a href="#" class="control_prev"><</a>
-                <ul>
-                  <li><img src="img/stavish2.jpg" class="picture_response" style="max-width:100%;height:auto;"/></li>
-                  <li><img src="img/stavish4.jpg" class="picture_response" style="max-width:100%;height:auto;"/></li>
-                  <li><img src="img/stavish8.jpg" class="picture_response" style="max-width:100%;height:auto;"/></li>
-                  <li><img src="img/stavish5.jpg" class="picture_response" style="max-width:100%;height:auto;"/></li>
-                  <li><img src="img/stavish7.jpg" class="picture_response" style="max-width:100%;height:auto;"/></li>
-                  <li><img src="img/stavish9.jpg" class="picture_response" style="max-width:100%;height:auto;"/></li>
-                  <li><img src="img/stavish10.jpg" class="picture_response" style="max-width:100%;height:auto;"/></li>
-                  <li><img src="img/stavish11.jpg" class="picture_response" style="max-width:100%;height:auto;"/></li>
-                </ul>
-              </div>-->
-
-
-              <!--<div class="slider_option">
-                <input type="checkbox" id="checkbox">
-                <label for="checkbox">Autoplay Slider</label>
-              </div>-->
-
-
+              <ul class="rslides">
+                <li><img src="img/stavish1.jpg" alt=""></li>
+                <li><img src="img/stavish2.jpg" alt=""></li>
+                <li><img src="img/stavish4.jpg" alt=""></li>
+                <li><img src="img/stavish5.jpg" alt=""></li>
+                <li><img src="img/stavish6.jpg" alt=""></li>
+                <li><img src="img/stavish7.jpg" alt=""></li>
+              </ul>
             </div>
         </div>
     </section>
@@ -253,7 +238,8 @@
 
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -270,13 +256,29 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
     <script src="js/slider.js"></script>
-
-    <!--<script>
+    <script src="js/responsiveslides.js"></script>
+    <script>
       $(function() {
-        $(".rslides").responsiveSlides();
+        $(".rslides").responsiveSlides({
+          auto: true,             // Boolean: Animate automatically, true or false
+          speed: 500,            // Integer: Speed of the transition, in milliseconds
+          timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+          pager: false,           // Boolean: Show pager, true or false
+          nav: false,              // Boolean: Show navigation, true or false
+          random: false,          // Boolean: Randomize the order of the slides, true or false
+          pause: false,           // Boolean: Pause on hover, true or false
+          pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+          prevText: "Previous",   // String: Text for the "previous" button
+          nextText: "Next",       // String: Text for the "next" button
+          maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+          navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+          manualControls: "",     // Selector: Declare custom pager navigation
+          namespace: "rslides",   // String: Change the default namespace used
+          before: function(){},   // Function: Before callback
+          after: function(){}     // Function: After callback
+        });
       });
-    </script>-->
-
+    </script>
 </body>
 
 </html>
